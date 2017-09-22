@@ -37,7 +37,9 @@ public final class QueryUtils {
     /**
      * Query the USGS dataset and return a list of {@link Earthquake} objects.
      */
-    public static List<Earthquake> fetchEarthquakeData(String requestUrl) {
+    public static List<Earthquake> fetchEarthquakeData(String requestUrl) throws InterruptedException {
+
+        //Thread.sleep(2000);
         // Create URL object
         URL url = createUrl(requestUrl);
 
